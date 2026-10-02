@@ -1,6 +1,9 @@
-#ifndef EMPLOYEES_H
-#define EMPLOYEES_H
+// Function prototypes
 
-void employeeMenu(void);
+float calculateSalary(float basic, float extraAllowance);
 
-#endif
+void addEmployee();
+
+void displayEmployees();
+
+void searchEmployee();

@@ -1,77 +1,55 @@
-
 #include <stdio.h>
-#include <stdlib.h>
-#include <stdlib.h>
-
-/* Header inclusions for module routing */
 #include "employees.h"
-#include "budget.h"
-#include "suppliers.h"
-#include "assets.h"
-#include "reports.h"
 
-/* Dummy implementations until teammates supply their .c files */
-void employeeMenu(void) { printf("\n--- Employee Management Module ---\n"); }
-void budgetMenu(void)   { printf("\n--- Budget Management Module ---\n"); }
-void assetMenu(void)    { printf("\n--- Asset Management Module ---\n"); }
-void reportsMenu(void)  { printf("\n--- System Reports Module ---\n"); }
+int main()
+{
+    // Variable to store menu choice
+    int choice;
 
-/* Function prototypes for Member 6 */
-void displayMainMenu(void);
-void navigateSystem(void);
-void clearInputBuffer(void);
+    // Repeat menu until user chooses Exit
+    do 
+    {
+        // Display menu
+        printf("\n--- EMPLOYEE MANAGEMENT SYSTEM ---\n");
+        printf("1. Add Employee\n");
+        printf("2. Display Employees\n");
+        printf("3. Search Employee\n");
+        printf("4. Exit\n");
 
-int main(void) {
-    navigateSystem();
-    return 0;
-}
+        // Ask user to enter choice
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
 
-void displayMainMenu(void) {
-    printf("\n========================================\n");
-    printf("MUNICIPAL FINANCIAL MANAGEMENT SYSTEM\n");
-    printf("========================================\n");
-    printf("1. Employee Management\n");
-    printf("2. Budget Management\n");
-    printf("3. Supplier Management\n");
-    printf("4. Asset Management\n");
-    printf("5. Reports\n");
-    printf("6. Exit\n");
-    printf("========================================\n");
-    printf("Enter your choice (1-6): ");
-}
+        // Perform action based on user's choice
+        switch(choice)
+        {
+            // Add employee
+            case 1:
+            addEmployee();
+            break;
 
-void navigateSystem(void) {
-    int choice = 0;
-    int running = 1;
+            // Display all employees
+            case 2:
+            displayEmployees();
+            break;
 
-    while (running) {
-        displayMainMenu();
+            // Search for an employee
+            case 3:
+            searchEmployee();
+            break;
 
-        /* Input validation to check for non-numeric input */
-        if (scanf("%d", &choice) != 1) {
-            printf("\n[ERROR] Invalid input! Please enter a valid number.\n");
-            clearInputBuffer();
-            continue;
-        }
+            //Exit the program
+            case 4:
+            printf("Exiting Program...\n");
+            break;
 
-        switch (choice) {
-            case 1: employeeMenu(); break;
-            case 2: budgetMenu(); break;
-            case 3: supplierMenu(); break;
-            case 4: assetMenu(); break;
-            case 5: reportsMenu(); break;
-            case 6:
-                printf("\nExiting system. Goodbye!\n");
-                running = 0;
-                break;
+            // Handle Invalid menu choices
             default:
-                printf("\n[ERROR] Choice out of range! Select between 1 and 6.\n");
-                break;
+            printf("Invalid Choice!\n");
         }
     }
-}
+    while(choice != 4);
 
-void clearInputBuffer(void) {
-    int c;
-    while ((c = getchar()) != '\n' && c != EOF);
+    //End of program
+    return 0;
 }
