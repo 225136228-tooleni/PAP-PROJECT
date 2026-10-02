@@ -13,7 +13,6 @@
 /* Dummy implementations until teammates supply their .c files */
 void employeeMenu(void) { printf("\n--- Employee Management Module ---\n"); }
 void budgetMenu(void)   { printf("\n--- Budget Management Module ---\n"); }
-void supplierMenu(void) { printf("\n--- Supplier Management Module ---\n"); }
 void assetMenu(void)    { printf("\n--- Asset Management Module ---\n"); }
 void reportsMenu(void)  { printf("\n--- System Reports Module ---\n"); }
 
