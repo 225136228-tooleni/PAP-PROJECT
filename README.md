@@ -6,9 +6,9 @@
 ## Group Members
 | Name | Student Number | Responsibility |
 |------|---------------|----------------|
-| ... | ... | Employee Management |
+|Sarty Ndjendjela|226040453| Employee Management |
 |Tweufiilwa J Vataleni     | 226157121 | Budget Management |
-| ... | ... | Supplier Management |
+|Tooleni Simon|225136228| Supplier Management |
 | Max K Gebhard | 226085783 | Asset Management |
 | ... | ... | Reports |
 |Kambinda Posani|226080749| Functions & Integration |
@@ -53,11 +53,11 @@ Type the number of a menu option and press **Enter**. Entering text, a number ou
 
 | Member | Responsibility | Files |
 |--------|----------------|-------|
-| 1 | Employee Management | `employees.c`, `employees.h` |
-| 2 | Budget Management | `budget.c`, `budget.h` |
-| 3 | Supplier Management | `suppliers.c`, `suppliers.h` |
-| 4 | Asset Management | `assets.c`, `assets.h` |
-| 5 | Reports | `reports.c`, `reports.h` |
-| 6 | Functions & integration | `main.c` |
-| 7 | Input validation (salary, budget, menu), error handling, README, technical report, GitHub repository management | `validation.c`, `validation.h`,  `README.md`, `GIT_WORKFLOW.md`,  |
+|1.Sarty Ndjendjela| Employee Management | `employees.c`, `employees.h` |
+|2.Tweufiilwa J Vataleni| Budget Management | `budget.c`, `budget.h` |
+|3.Tooleni Simon| Supplier Management | `suppliers.c`, `suppliers.h` |
+|4.Max K Gebhard| Asset Management | `assets.c`, `assets.h` |
+|5. | Reports | `reports.c`, `reports.h` |
+|6.Kambinda Posani| Functions & integration | `main.c` |
+|7.Ndasilwohenda Nandiinotya| Input validation (salary, budget, menu), error handling, README, technical report, GitHub repository management | `validation.c`, `validation.h`,  `README.md`, `GIT_WORKFLOW.md`,  |
 
