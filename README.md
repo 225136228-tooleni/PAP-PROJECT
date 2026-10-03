@@ -6,13 +6,13 @@
 ## Group Members
 | Name | Student Number | Responsibility |
 |------|---------------|----------------|
-|Sarty Ndjendjela|226040453| Employee Management |
-|Tweufiilwa J Vataleni     | 226157121 | Budget Management |
-|Tooleni Simon|225136228| Supplier Management |
-| Max K Gebhard | 226085783 | Asset Management |
-| ... | ... | Reports |
-|Kambinda Posani|226080749| Functions & Integration |
-|Ndasilwohenda N Nandiinotya | 224080881 | Input Validation & Documentation |
+|1.Sarty Ndjendjela|226040453| Employee Management |
+|2.Tweufiilwa J Vataleni     | 226157121 | Budget Management |
+|3.Tooleni Simon|225136228| Supplier Management |
+|4.Max K Gebhard | 226085783 | Asset Management |
+|5.... | ... | Reports |
+|6.Kambinda Posani|226080749| Functions & Integration |
+|7.Ndasilwohenda N Nandiinotya | 224080881 | Input Validation & Documentation |
 
 ## Project Description
 A menu-driven C application that manages municipal employees, budgets, suppliers, and assets, with reporting and input validation.
