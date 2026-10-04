@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "employees.h"
 #include "budget.h"
+#include "suppliers.h"
 
 int main()
 {
@@ -11,10 +12,11 @@ int main()
     do 
     {
         // Display menu
-        printf("\n--- EMPLOYEE FINANCIAL MANAGEMENT SYSTEM ---\n");
+        printf("\n--- MUNICIPAL FINANCIAL MANAGEMENT SYSTEM ---\n");
         printf("1. Employee Management\n");
         printf("2. Budget Management\n");
-        printf("3. Exit\n");
+        printf("3. Supplier Management\n");
+        printf("4. Exit\n");
 
         // Ask user to enter choice
         printf("Enter your choice: ");
@@ -33,8 +35,13 @@ int main()
             budgetMenu();
             break;
 
-            //Exit the program
+            //Display supplier menu
             case 3:
+            supplierMenu();
+            break;
+
+            //Exit the program
+            case 4:
             printf("Exiting Program...\n");
             break;
 
@@ -43,7 +50,7 @@ int main()
             printf("Invalid Choice!\n");
         }
     }
-    while(choice != 3);
+    while(choice != 4);
 
     //End of program
     return 0;
