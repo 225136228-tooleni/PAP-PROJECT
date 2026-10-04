@@ -1,5 +1,9 @@
 #ifndef REPORTS_H
 #define REPORTS_H
-void reportsMenu(void);
+
+#include "employees.h"
+#include "budget.h"
+#include "suppliers.h"
+#include "assets.h"
 
 #endif
