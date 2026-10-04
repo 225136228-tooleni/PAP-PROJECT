@@ -10,7 +10,7 @@
 |2.Tweufiilwa J Vataleni     | 226157121 | Budget Management |
 |3.Tooleni Simon|225136228| Supplier Management |
 |4.Max K Gebhard | 226085783 | Asset Management |
-|5.... | ... | Reports |
+|5.Karumbu Rukira | 222097833 | Reports |
 |6.Kambinda Posani|226080749| Functions & Integration |
 |7.Ndasilwohenda N Nandiinotya | 224080881 | Input Validation & Documentation |
 
