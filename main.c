@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "employees.h"
+#include "budget.h"
 
 int main()
 {
@@ -10,11 +11,10 @@ int main()
     do 
     {
         // Display menu
-        printf("\n--- EMPLOYEE MANAGEMENT SYSTEM ---\n");
-        printf("1. Add Employee\n");
-        printf("2. Display Employees\n");
-        printf("3. Search Employee\n");
-        printf("4. Exit\n");
+        printf("\n--- EMPLOYEE FINANCIAL MANAGEMENT SYSTEM ---\n");
+        printf("1. Employee Management\n");
+        printf("2. Budget Management\n");
+        printf("3. Exit\n");
 
         // Ask user to enter choice
         printf("Enter your choice: ");
@@ -23,23 +23,18 @@ int main()
         // Perform action based on user's choice
         switch(choice)
         {
-            // Add employee
+            // Display employee menu
             case 1:
-            addEmployee();
+            employeeMenu();
             break;
 
-            // Display all employees
+            // Display budget menu
             case 2:
-            displayEmployees();
-            break;
-
-            // Search for an employee
-            case 3:
-            searchEmployee();
+            budgetMenu();
             break;
 
             //Exit the program
-            case 4:
+            case 3:
             printf("Exiting Program...\n");
             break;
 
@@ -48,7 +43,7 @@ int main()
             printf("Invalid Choice!\n");
         }
     }
-    while(choice != 4);
+    while(choice != 3);
 
     //End of program
     return 0;
