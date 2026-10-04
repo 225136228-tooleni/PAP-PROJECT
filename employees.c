@@ -62,10 +62,23 @@ for(i = 0; i < employeeCount; i++)
 }
 
     printf("Enter Employee Name: ");
-    scanf("%s", employeeNames[employeeCount]);
+    fgets(employeeNames[employeeCount], 30, stdin);
+
+    if (strlen(employeeNames[employeeCount]) <= 1) 
+    {
+        printf("Employee name cannot be empty!\n");
+        return;
+    }
+
 
     printf("Enter Department: ");
-    scanf("%s", departments[employeeCount]);
+    fgets(departments[employeeCount], 30, stdin);
+
+    if (strlen(departments[employeeCount]) <= 1) 
+    {
+        printf("Department cannot be empty!\n");
+        return;
+    }
 
     printf("Enter Basic Salary: ");
     scanf("%f", &basicSalary[employeeCount]);

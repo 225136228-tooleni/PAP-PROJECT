@@ -3,6 +3,7 @@
 #include "budget.h"
 #include "suppliers.h"
 #include "assets.h"
+#include "reports.h"
 
 int main()
 {
@@ -18,7 +19,8 @@ int main()
         printf("2. Budget Management\n");
         printf("3. Supplier Management\n");
         printf("4. Asset Management\n");
-        printf("5. Exit\n");
+        printf("5. Reports Management\n");
+        printf("6. Exit\n");
 
         // Ask user to enter choice
         printf("Enter your choice: ");
@@ -47,8 +49,13 @@ int main()
             assetMenu();
             break;
 
-            //Exit the program
+            // Display reports menu
             case 5:
+            reportsMenu();
+            break;
+
+            //Exit the program
+            case 6:
             printf("Exiting Program...\n");
             break;
 
@@ -57,7 +64,7 @@ int main()
             printf("Invalid Choice!\n");
         }
     }
-    while(choice != 5);
+    while(choice != 6);
 
     //End of program
     return 0;
