@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "employees.h"
 
 // Array to store employee ID
@@ -70,7 +71,7 @@ while(getchar() != '\n');
         printf("Employee name cannot be empty!\n");
         return;
     }
-    
+
     printf("Enter Department: ");
     fgets(departments[employeeCount], 30, stdin);
 
