@@ -57,7 +57,7 @@ Type the number of a menu option and press **Enter**. Entering text, a number ou
 |2.Tweufiilwa J Vataleni| Budget Management | `budget.c`, `budget.h` |
 |3.Tooleni Simon| Supplier Management | `suppliers.c`, `suppliers.h` |
 |4.Max K Gebhard| Asset Management | `assets.c`, `assets.h` |
-|5. | Reports | `reports.c`, `reports.h` |
+|5.Karumbu Rukira | Reports | `reports.c`, `reports.h` |
 |6.Kambinda Posani| Functions & integration | `main.c` |
 |7.Ndasilwohenda Nandiinotya| Input validation (salary, budget, menu), error handling, README, technical report, GitHub repository management | `validation.c`, `validation.h`,  `README.md`, `GIT_WORKFLOW.md`,  |
 
