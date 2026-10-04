@@ -70,8 +70,7 @@ while(getchar() != '\n');
         printf("Employee name cannot be empty!\n");
         return;
     }
-
-
+    
     printf("Enter Department: ");
     fgets(departments[employeeCount], 30, stdin);
 
