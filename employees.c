@@ -60,6 +60,7 @@ for(i = 0; i < employeeCount; i++)
         return;
     }
 }
+while(getchar() != '\n'); 
 
     printf("Enter Employee Name: ");
     fgets(employeeNames[employeeCount], 30, stdin);
