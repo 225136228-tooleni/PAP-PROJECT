@@ -35,13 +35,23 @@ float calculateSalary(float basic, float housing, float transport)
     return basic + housing + transport;
 }
 
-// Function to add an employee
+int searchEmployee(int id, int ids[], int size)
+{
+    for(int i = 0; i < size; i++)
+    {
+        if(ids[i] == id)
+        {
+            return i; // Return index if found
+        }
+    }
+    return -1; // Return -1 if not found
+}
+
+// Check if maximum employees reached
 void addEmployee()
 {
 
-int i;
-
-// Check if maximum employees reached
+int position;
 if(employeeCount >= 50)
 {
     printf("Maximum employee limit reached!\n");
@@ -52,30 +62,28 @@ if(employeeCount >= 50)
 printf("Enter Employee ID: ");
 scanf("%d", &employeeIDs[employeeCount]);
 
+position = searchEmployee(employeeIDs[employeeCount], employeeIDs, employeeCount);
+
 // Check for duplicate ID
-for(i = 0; i < employeeCount; i++)
+if(position != -1)
 {
-    if(employeeIDs[i] == employeeIDs[employeeCount])
-    {
-        printf("Employee with ID %d already exists!\n", employeeIDs[employeeCount]);
-        return;
-    }
+    printf("Employee with ID %d already exists!\n", employeeIDs[employeeCount]);
+    return;
 }
-while(getchar() != '\n'); 
 
     printf("Enter Employee Name: ");
-    fgets(employeeNames[employeeCount], 30, stdin);
+    scanf("%s", employeeNames[employeeCount]);
 
-    if (strlen(employeeNames[employeeCount]) <= 1) 
+    if(strlen(employeeNames[employeeCount]) == 0) 
     {
         printf("Employee name cannot be empty!\n");
         return;
     }
 
     printf("Enter Department: ");
-    fgets(departments[employeeCount], 30, stdin);
+    scanf("%s", departments[employeeCount]);
 
-    if (strlen(departments[employeeCount]) <= 1) 
+    if(strlen(departments[employeeCount]) == 0) 
     {
         printf("Department cannot be empty!\n");
         return;
@@ -162,22 +170,44 @@ void displayEmployees()
 }
 
 // Function to search employee
-void searchEmployee()
+void searchEmployeeByID()
 {
-    int searchID;
-    int i;
+    int id;
+    printf("\nEnter Employee ID to search: ");
+    scanf("%d", &id);
+
+    int index = searchEmployee(id, employeeIDs, employeeCount);
+    if(index == -1)
+    {
+        printf("Employee not found!\n");
+    }
+    else
+    {
+        printf("ID: %d\n", employeeIDs[index]);
+        printf("Name: %s\n", employeeNames[index]);
+        printf("Department: %s\n", departments[index]);
+        printf("Basic Salary: %.2f\n", basicSalary[index]);
+        printf("Housing Allowance: %.2f\n", housingAllowances[index]);
+        printf("Transport Allowance: %.2f\n", transportAllowance[index]);
+        printf("Total Salary: %.2f\n", totalSalaries[index]);
+        printf("Other Relevant Information: %s\n", otherInformation[index]);
+    }
+}
+
+// Search employee by name
+void searchEmployeeByName()
+{
+    char searchName[30];
     int found = 0;
 
-    // Ask user for employee ID
-    printf("\nEnter Employee ID to search: ");
-    scanf("%d", &searchID);
+    printf("\nEnter Employee Name to search: ");
+    scanf("%s", searchName);
 
-    // Search through employee records
-    for(i = 0; i < employeeCount; i++)
+    for(int i = 0; i < employeeCount; i++)
     {
-        if(employeeIDs[i] == searchID)
+        if(strcmp(employeeNames[i], searchName) == 0)
         {
-            printf("\nEmployee found!\n");
+            printf("\nEmployee found at position %d!\n", i);
 
             printf("ID: %d\n", employeeIDs[i]);
 
@@ -195,14 +225,12 @@ void searchEmployee()
 
             printf("Other Relevant Information: %s\n", otherInformation[i]);
 
-    // Employee found
+            // Employee found
             found = 1;
 
-            break;
         }
     }
 
-    // Display message if employee is not found
     if(found == 0)
     {
         printf("\nEmployee Not Found!\n");
@@ -219,9 +247,9 @@ void employeeMenu()
         printf("\n--- EMPLOYEE MANAGEMENT MENU ---\n");
         printf("1. Add Employee\n");
         printf("2. Display Employees\n");
-        printf("3. Search Employee\n");
-        printf("4. Exit\n");
-
+        printf("3. Search Employee by ID\n");
+        printf("4. Search Employee by Name\n");
+        printf("5. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
@@ -236,10 +264,14 @@ void employeeMenu()
                 break;
 
             case 3:
-                searchEmployee();
+                searchEmployeeByID();
                 break;
 
             case 4:
+                searchEmployeeByName();
+                break;
+
+            case 5:
                 printf("Exiting Employee Management Menu...\n");
                 break;
 
@@ -247,5 +279,5 @@ void employeeMenu()
                 printf("Invalid Choice!\n");
         }
     }
-    while(choice != 4);
+    while(choice != 5);
 }

@@ -5,7 +5,8 @@ float calculateSalary(float basic, float housing, float transport);
 
 void addEmployee(void);
 void displayEmployees(void);
-void searchEmployee(void);
+int searchEmployee(int id, int ids[], int size);
+void searchEmployeeByName(void); 
 void employeeMenu(void);
 
 #endif
