@@ -245,6 +245,8 @@ void budgetMenu(void)
             case 3: displayBudgets();             break;
             case 4: displayExceededDepartments(); break;
             case 5: printf("Returning to main menu...\n"); break;
+
+            default: printf("Invalid choice. Please try again.\n");
         }
     } while (choice != 5);
 }
